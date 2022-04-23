@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Session</title>
+  </head>
+  <body>
+    {% if username %}
+      <h1>Username: {{ username }} </h1>
+      <a href="{{ url_for('logout') }}">Logout</a>
+    {% else %}
+      <form method="POST" action="{{ url_for('login') }}">
+        <input type='text' name='username' />
+        <input type='submit' value='login' />
+      </form>
+    {% endif %}
+  </body>
+</html>

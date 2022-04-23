@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+{% block content %}
+<table>
+    <tr>
+      <th>Ime i prezime:</th>
+      <td>{{ ime }}</td>
+    </tr>
+    <tr>
+      <th>Adresa:</th>
+      <td>{{ adresa }}</td>
+    </tr>
+    <tr>
+      <th>Vrsta pice:</th>
+      <td>{{ vrsta }}</td>
+    </tr>
+    <tr>
+      <th>Veličina pice:</th>
+      <td>{{ velicina }}</td>
+    </tr>
+    <tr>
+      <th>Dodaci:</th>
+      <td>
+        {% for dodatak in dodaci %}
+        {{ dodatak }}{{ ", " if not loop.last else "" }}
+        {% endfor %}
+      </td>
+    </tr>
+  </table>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cookies</title>
+  </head>
+  <body>
+    {% if name %}
+      <h1>Welcome {{ name }} </h1>
+      <a href="{{ url_for('resetcookie') }}">Logout</a>
+    {% else %}
+      <form method="POST" action="{{ url_for('setcookie') }}">
+        <input type='text' name='name' />
+        <input type='submit' value='login' />
+      </form>
+    {% endif %}
+  </body>
+</html>

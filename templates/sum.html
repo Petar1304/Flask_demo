@@ -1,0 +1,11 @@
+{% extends "index.html" %}
+{% block content %}
+    <form>
+    <input type="text" name="num1" value="{{ num1 }}" /> 
+    <input type="text" name="num2" value="{{ num2 }}" />
+    <input type="submit" value="sum" />
+    </form>
+    {% if sum != None %}
+        <h4>Sum: {{ sum }}</h4>
+    {% endif %}
+{% endblock %}
